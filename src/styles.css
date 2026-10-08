@@ -317,9 +317,15 @@ svg {
 .product-card {
   display: block;
   min-width: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 .product-card:hover {
   opacity: 1;
+}
+.product-card:focus-visible {
+  outline: none;
 }
 .product-image {
   position: relative;
