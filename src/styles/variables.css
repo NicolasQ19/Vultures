@@ -1,0 +1,46 @@
+
+:root {
+
+  --paper: #f5f4ef;
+  --paper-raised: #eeede6;
+  --surface: #e9e8e0;
+  --surface-strong: #e7e5de;
+
+
+  --ink: #23241f;
+  --ink-strong: #252620;
+  --ink-hover: #42443a;
+  --ink-invert: #f7f6ee;
+  --muted: #76776d;
+  --muted-light: #87897d;
+
+
+  --line: #d8d8d0;
+  --line-soft: #deded7;
+  --line-strong: #cecec3;
+  --line-active: #52564b;
+
+
+  --sand: #c3b8a5;
+  --sand-fade: #d2c8b15c;
+  --sage: #999e8c;
+  --sage-soft: #999b91;
+  --olive: #707760;
+  --danger: #945043;
+
+
+  --font-body: Inter, Arial, sans-serif;
+  --font-display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+
+
+  --gutter: 4.2%;
+  --shadow-float: 0 5px 25px #0001;
+  --transition: 0.25s;
+}
+
+
+@media (max-width: 760px) {
+  :root {
+    --gutter: 6%;
+  }
+}

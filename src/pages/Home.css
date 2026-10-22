@@ -1,0 +1,257 @@
+.hero {
+  height: 690px;
+  min-height: 590px;
+  position: relative;
+  overflow: hidden;
+  background: var(--sand);
+}
+.hero-image {
+  height: 100%;
+  object-position: center 5%;
+  filter: saturate(0.55) contrast(0.89);
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(211, 202, 183, 0.2), transparent 70%);
+  pointer-events: none;
+}
+.hero-content {
+  position: absolute;
+  top: 135px;
+  left: 6%;
+  z-index: 1;
+}
+.hero-kicker {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 550;
+  display: block;
+  margin-bottom: 23px;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(65px, 7.5vw, 110px);
+  line-height: 0.91;
+  letter-spacing: -1.5px;
+  font-weight: 700;
+}
+.headline-dot {
+  color: var(--ink);
+}
+.hero-bottom {
+  display: flex;
+  align-items: flex-end;
+  gap: 66px;
+  margin-top: 34px;
+}
+.hero-bottom p {
+  font-size: 11px;
+  line-height: 1.65;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+.hero-bottom .button {
+  min-width: 164px;
+}
+
+.hero-caption span:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.manifesto-strip p {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+.manifesto-strip p span {
+  font-weight: 400;
+}
+.manifesto-strip > .eyebrow {
+  margin-left: auto;
+  font-size: 8px;
+}
+.home-products {
+  padding: 65px var(--gutter) 74px;
+}
+.editorial {
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  border-top: 1px solid var(--line);
+}
+.editorial-image {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+.editorial-image img {
+  height: 150%;
+  position: absolute;
+  object-position: 100%;
+  filter: saturate(0.25);
+}
+.editorial-image > span {
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  font-size: 8px;
+  letter-spacing: 1.3px;
+}
+.editorial-copy {
+  padding: 74px 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--surface);
+}
+.editorial-copy h2 {
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -1.8px;
+  margin: 28px 0;
+}
+.editorial-copy p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+  max-width: 350px;
+  margin-bottom: 35px;
+}
+@media (min-width: 1600px) {
+  .hero {
+    height: 800px;
+  }
+  .hero-content {
+    top: 175px;
+  }
+  .hero h1 {
+    font-size: 125px;
+  }
+  .home-products {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 1050px) {
+  .hero {
+    height: 620px;
+  }
+  .hero-content {
+    top: 150px;
+  }
+  .hero h1 {
+    font-size: 83px;
+  }
+  .hero-bottom {
+    gap: 40px;
+  }
+  .hero-image {
+    object-position: 60%;
+  }
+  .editorial-copy {
+    padding: 55px 10%;
+  }
+  .editorial-copy h2 {
+    font-size: 38px;
+  }
+  .manifesto-strip > .eyebrow {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .hero {
+    height: 720px;
+    min-height: 0;
+  }
+  .hero-image {
+    object-position: 63% 50%;
+    filter: saturate(0.45) contrast(0.85);
+  }
+  .hero:after {
+    background: linear-gradient(90deg, var(--sand-fade), transparent);
+  }
+  .hero-topline {
+    top: 23px;
+    left: var(--gutter);
+    right: var(--gutter);
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .hero-topline span:last-child {
+    display: none;
+  }
+  .hero-content {
+    left: 7%;
+    top: 128px;
+  }
+  .hero-kicker {
+    font-size: 7px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(57px, 11.7vw, 83px);
+    letter-spacing: -1px;
+  }
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    margin-top: 28px;
+  }
+  .hero-bottom p {
+    font-size: 9px;
+  }
+  .hero-bottom .button {
+    min-width: 165px;
+    min-height: 45px;
+  }
+  .hero-caption {
+    left: var(--gutter);
+    right: var(--gutter);
+    font-size: 6px;
+    letter-spacing: 0.6px;
+    bottom: 21px;
+  }
+  .hero-caption span:nth-child(2) {
+    gap: 5px;
+  }
+  .manifesto-strip {
+    min-height: 79px;
+    gap: 14px;
+    padding: 18px var(--gutter);
+  }
+  .small-cross {
+    font-size: 27px;
+  }
+  .manifesto-strip p {
+    font-size: 9px;
+    line-height: 1.7;
+  }
+  .manifesto-strip p span {
+    display: block;
+  }
+  .home-products {
+    padding: 42px var(--gutter) 46px;
+  }
+  .editorial {
+    grid-template-columns: 1fr;
+  }
+  .editorial-image {
+    min-height: 410px;
+  }
+  .editorial-copy {
+    padding: 50px 8%;
+  }
+  .editorial-copy h2 {
+    font-size: 43px;
+    margin: 20px 0;
+  }
+  .editorial-copy p {
+    font-size: 11px;
+  }
+}

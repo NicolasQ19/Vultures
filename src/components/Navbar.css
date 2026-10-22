@@ -1,0 +1,136 @@
+.header {
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--gutter);
+  background: var(--paper);
+  position: relative;
+  z-index: 30;
+  border-bottom: 1px solid var(--line-soft);
+}
+.desktop-nav {
+  display: flex;
+  gap: 42px;
+  margin-left: 65px;
+}
+.desktop-nav a,
+.header-actions {
+  font-size: 10px;
+  letter-spacing: 1.1px;
+  font-weight: 550;
+}
+.desktop-nav a {
+  position: relative;
+}
+.desktop-nav a.active:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 1px;
+  background: var(--ink);
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+.header-actions button {
+  font-size: 10px;
+  letter-spacing: 1.1px;
+  padding: 0;
+}
+.mobile-toggle {
+  display: none;
+}
+.search-panel {
+  position: absolute;
+  z-index: 35;
+  top: 94px;
+  left: 0;
+  right: 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 20px;
+  padding: 25px 5%;
+}
+.search-panel input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.search-panel button {
+  padding: 0;
+}
+
+.mobile-nav.offcanvas {
+  top: 78px;
+  width: 100%;
+  background: var(--paper);
+  border: 0;
+
+  z-index: 25;
+}
+.mobile-nav .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  padding: 45px var(--gutter);
+  gap: 30px;
+}
+.mobile-nav .offcanvas-body > a {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: -1px;
+}
+.mobile-nav .offcanvas-body > .eyebrow:last-child {
+  margin-top: auto;
+}
+@media (min-width: 1600px) {
+  .header {
+    height: 105px;
+  }
+}
+@media (max-width: 1050px) {
+  .desktop-nav {
+    margin-left: 0;
+    gap: 26px;
+  }
+  .header-actions {
+    gap: 25px;
+  }
+}
+@media (max-width: 760px) {
+  .header {
+    height: 78px;
+    padding: 0 var(--gutter);
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .header-actions {
+    gap: 22px;
+  }
+  .header-actions .mobile-toggle {
+    display: flex;
+  }
+  .header-actions .search-toggle {
+    font-size: 9px;
+  }
+  .header-actions > a {
+    font-size: 9px;
+  }
+  .search-panel {
+    top: 78px;
+    gap: 13px;
+  }
+  .search-panel input {
+    font-size: 10px;
+  }
+}

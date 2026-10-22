@@ -1,0 +1,39 @@
+
+.size-guide-modal .modal-content {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 0;
+}
+.size-guide-modal .modal-header {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 23px;
+}
+.size-guide-modal .modal-title {
+  font-size: 12px;
+  font-weight: 550;
+  letter-spacing: 1.3px;
+}
+.size-guide-modal .modal-body {
+  padding: 23px;
+}
+.size-guide-modal .modal-body > p {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.size-guide-modal th,
+.size-guide-modal td {
+  font-size: 10px;
+  letter-spacing: 0.7px;
+  padding: 9px 0;
+  color: var(--ink);
+  background: none;
+}
+.size-guide-modal th {
+  font-weight: 550;
+  border-bottom: 1px solid var(--line);
+}
+.size-guide-modal td {
+  color: var(--muted);
+}

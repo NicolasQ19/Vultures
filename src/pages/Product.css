@@ -1,0 +1,259 @@
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 9px;
+  letter-spacing: 1.1px;
+  font-weight: 550;
+  padding: 10px 14px 10px 11px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+}
+.back-link:hover {
+  background: var(--surface);
+  opacity: 1;
+}
+.breadcrumb {
+  display: flex;
+  gap: 12px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--muted-light);
+  margin-bottom: 34px;
+}
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 7%;
+}
+.detail-gallery {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.thumbnails {
+  width: 62px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.thumbnails button {
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background: var(--surface-strong);
+}
+.thumbnails button.active {
+  border-color: var(--line-active);
+}
+.thumbnails img {
+  aspect-ratio: 3/4;
+  filter: saturate(0.1);
+  mix-blend-mode: multiply;
+}
+.detail-main-image {
+  flex: 1;
+  overflow: hidden;
+  background: var(--surface-strong);
+  position: relative;
+}
+.detail-main-image > img {
+  aspect-ratio: 3/4;
+  filter: saturate(0.15) contrast(0.9);
+  mix-blend-mode: multiply;
+  transition: transform 0.6s;
+}
+.view-1 > img {
+  transform: scale(1.5);
+  object-position: top;
+}
+.view-2 > img {
+  transform: scale(2);
+  object-position: bottom;
+}
+.detail-info {
+  padding-top: 4px;
+}
+.detail-info h1 {
+  font-size: 35px;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin: 17px 0;
+}
+.detail-price {
+  font-size: 17px;
+}
+.description {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin: 30px 0;
+}
+.option-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  letter-spacing: 1px;
+  margin: 22px 0 14px;
+}
+.option-label > span {
+  color: var(--muted);
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+.option-label button {
+  font-size: 8px;
+  letter-spacing: 0.7px;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.color-options {
+  display: flex;
+  gap: 10px;
+}
+.color-options button {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  outline: 1px solid transparent;
+  outline-offset: 3px;
+}
+.color-options button.active {
+  outline-color: var(--sage-soft);
+}
+.size-options {
+  display: flex;
+  gap: 9px;
+}
+.size-options button {
+  min-width: 55px;
+  min-height: 39px;
+  border: 1px solid var(--line);
+  font-size: 10px;
+}
+.size-options button.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.stock {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin: 23px 0;
+  font-size: 10px;
+  color: var(--muted);
+}
+.stock-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--olive);
+}
+.add-button {
+  width: 100%;
+}
+.shipping-note {
+  font-size: 7px;
+  letter-spacing: 0.8px;
+  text-align: center;
+  margin: 15px 0 28px;
+  color: var(--muted);
+}
+
+.accordions .accordion-item {
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+.accordions .accordion-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.accordions .accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  color: var(--ink);
+  box-shadow: none;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding: 19px 0;
+}
+
+.accordions .accordion-button::after {
+  display: none;
+}
+.accordions .accordion-button:not(.collapsed) svg {
+  transform: rotate(45deg);
+}
+.accordions .accordion-button svg {
+  transition: transform var(--transition);
+}
+.accordions .accordion-body {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+  padding: 0 0 20px;
+}
+.related {
+  margin-top: 80px;
+}
+.related h2 {
+  font-size: 22px;
+}
+@media (max-width: 1050px) {
+  .detail-layout {
+    gap: 5%;
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .thumbnails {
+    width: 45px;
+  }
+  .detail-info h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 760px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .detail-gallery {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+  .detail-main-image {
+    width: 100%;
+  }
+  .detail-main-image > img {
+    aspect-ratio: 4/4.5;
+  }
+  .thumbnails {
+    flex-direction: row;
+    width: auto;
+  }
+  .thumbnails button {
+    width: 48px;
+  }
+  .detail-info h1 {
+    font-size: 32px;
+  }
+  .description {
+    margin: 23px 0;
+  }
+  .breadcrumb {
+    font-size: 7px;
+    margin-bottom: 23px;
+  }
+  .related {
+    margin-top: 48px;
+  }
+  .related h2 {
+    font-size: 17px;
+  }
+}
