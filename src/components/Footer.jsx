@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
       <div className="footer-top">
         <Link className="wordmark" to="/">
-          VULTURE<span className="brand-dot">®</span>
+          VULTURES<span className="brand-dot">®</span>
         </Link>
         <p>
           ESENCIALES PARA CADA DÍA.

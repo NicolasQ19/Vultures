@@ -37,7 +37,7 @@ export default function Navbar() {
     <>
       <header className="header">
         <Link to="/" className="wordmark" aria-label="Inicio de Vulture">
-          VULTURE<span className="brand-dot">®</span>
+          VULTURES<span className="brand-dot">®</span>
         </Link>
         <nav className="desktop-nav">
           {paginas.map((pagina) => (
