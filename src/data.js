@@ -59,15 +59,15 @@ export const products = [
   },
   {
     id: 5,
-    name: "BUZO DE CUELLO REDONDO",
-    category: "BUZOS",
-    price: 105000,
+    name: "REMERA ESTAMPADA MANGA CORTA",
+    category: "REMERAS",
+    price: 40000,
     image: photo("photo-1576566588028-4147f3842f27"),
     description:
-      "Algodón grueso afelpado, corte amplio y terminaciones discretas. Un esencial para la media estación.",
+      "Algodón fino, corte amplio y terminaciones discretas. Un esencial para el verano.",
     stock: 9,
     sizes: ["S", "M", "L", "XL"],
-    colors: ["Gris cemento", "Negro lavado"],
+    colors: ["Blanco", "Gris"],
   },
   {
     id: 6,
